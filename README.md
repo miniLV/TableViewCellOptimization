@@ -1,5 +1,9 @@
 ## TableViewCell性能优化之 - 懒加载机制
 
+#### ScrollView滚动时-代理方法执行流程
+
+![ScrollView滚动时-代理方法执行流程](https://github.com/miniLV/github_images_miniLV/blob/master/2018Year/TableViewCellOptimization/%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+
 以最常见的cell加载webImage为例:
 
 #### 直接加载全部的图片
@@ -89,5 +93,11 @@
     }
 }
 ```
+
+<br>
+
+#### 最终实现的懒加载效果
+
+![懒加载效果](https://github.com/miniLV/github_images_miniLV/blob/master/2018Year/TableViewCellOptimization/demo.gif)
 
 [详情介绍](https://www.jianshu.com/p/04457377b48d)
