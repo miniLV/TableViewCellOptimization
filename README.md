@@ -100,4 +100,4 @@
 
 ![懒加载效果](https://github.com/miniLV/github_images_miniLV/blob/master/2018Year/TableViewCellOptimization/demo.gif)
 
-[详情介绍](https://www.jianshu.com/p/04457377b48d)
+[详情介绍](https://juejin.im/post/5c15f6cde51d4571a15779a9)
