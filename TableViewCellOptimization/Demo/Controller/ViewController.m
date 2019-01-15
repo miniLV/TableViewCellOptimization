@@ -170,12 +170,6 @@
 
 #pragma mark - <UIScrollViewDelegate>
 
-//手一直在拖拽控件
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-
-    [self p_loadImage];
-}
-
 - (void)p_loadImage{
 
     //拿到界面内-所有的cell的indexpath
@@ -193,15 +187,21 @@
     }
 }
 
-//手放开了-使用惯性-产生的动画效果
+//手放开了 - 停止拖动
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
 
     if(!decelerate){
         //直接停止-无动画
         [self p_loadImage];
     }else{
-        //有惯性的-会走`scrollViewDidEndDecelerating`方法，这里不用设置
+        //有动画效果的(惯性) - 会走`scrollViewDidEndDecelerating`方法，这里不用设置
     }
+}
+
+//是否有动画效果
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    [self p_loadImage];
 }
 
 @end
